@@ -6,7 +6,7 @@ import Footer from './Footer';
 
 const CheckoutPage = () => (
   <div className="flex flex-col items-center justify-center p-10 bg-red-100 h-screen">
-    <h1 className="text-2xl font-bold text-primary-text">Burası Ödeme Sayfası</h1>
+    <h1 className="text-2xl font-bold text-primary-text">Ödeme Sayfası</h1>
   </div>
 );
 

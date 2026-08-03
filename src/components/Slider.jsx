@@ -1,4 +1,4 @@
-import { mainSliderData } from "../data/sliderData";
+import { mainSliderData } from "../data/sliderDataa";
 import {Swiper, SwiperSlide} from "swiper/react";
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 

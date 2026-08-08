@@ -17,9 +17,10 @@ const BestsellerProducts = () => {
       <div className="w-full max-w-6xl flex flex-row flex-wrap justify-center lg:justify-between gap-y-16 lg:gap-y-20">
        
         {bestsellerData.map((product) => (
-          <ProductCard 
+          <ProductCard
+            id={product.id} 
             key={product.id}
-            image={product.image}
+            images={product.images}
             title={product.title}
             department={product.department}
             oldPrice={product.oldPrice}

@@ -1,4 +1,4 @@
-import { teamMembers } from './TeamPageData'; 
+import { teamMembers } from '../data/TeamPage'; 
 import { FaFacebook,FaInstagram } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 
@@ -35,11 +35,11 @@ const TeamPage = () => {
         {teamMembers.map((member) => (
           <div key={member.id} className="bg-white flex flex-col items-center rounded-sm shadow-sm overflow-hidden">
             
-            <div className="w-full aspect-square">
+            <div className="w-full h-78 aspect-square overflow-hidden">
               <img 
                 src={member.image} 
                 alt={member.name} 
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover hover:scale-105 transition-transform"
               />
             </div>
 

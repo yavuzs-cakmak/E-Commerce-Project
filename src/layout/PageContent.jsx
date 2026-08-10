@@ -4,6 +4,7 @@ import Header from './Header';
 import HomePage from '../pages/HomePage'; 
 import Footer from './Footer';
 import ShopPage from '../pages/ShopPage';
+import ProductDetailPage from '../pages/ProductDetailPage';
 
 const CheckoutPage = () => (
   <div className="flex flex-col items-center justify-center p-10 bg-red-100 h-screen">
@@ -26,6 +27,7 @@ const PageContent = () => {
         <Switch>
           <Route exact path="/" component={HomePage} />
           <Route path="/shop" component={ShopPage} />
+          <Route path="/product/:productId" component={ProductDetailPage} />
           <Route path="/odeme" component={CheckoutPage} />
         </Switch>
       </main>

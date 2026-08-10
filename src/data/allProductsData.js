@@ -1,7 +1,7 @@
 export const allProductsData =[
  {
     id: 1,
-    image: "/limonMorKadinHD.png", 
+    images:["/limonMorKadinHD.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"], 
     title: "Graphic Design",
     department: "English Department",
     oldPrice: "$16.48",
@@ -11,7 +11,7 @@ export const allProductsData =[
   },
   {
     id: 2,
-    image: "/BeyazTshirtErkekHD.png", 
+    images:["/BeyazTshirtErkekHD.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"], 
     title: "Web Development",
     department: "IT Department",
     oldPrice: "$16.48",
@@ -21,7 +21,7 @@ export const allProductsData =[
   },
   {
     id: 3,
-    image: "/pembeBeyazKadinHD.png", 
+    images:["/pembeBeyazKadinHD.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"], 
     title: "Web Development",
     department: "IT Department",
     oldPrice: "$16.48",
@@ -31,7 +31,7 @@ export const allProductsData =[
   },
   {
     id: 4,
-    image: "/ceketEtekKadinHD.png", 
+    images:["/ceketEtekKadinHD.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"], 
     title: "Web Development",
     department: "IT Department",
     oldPrice: "$16.48",
@@ -41,7 +41,7 @@ export const allProductsData =[
   },
   {
     id: 5,
-    image: "/griMontErkekHD.png", 
+    images:["/griMontErkekHD.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"], 
     title: "Web Development",
     department: "IT Department",
     oldPrice: "$16.48",
@@ -51,7 +51,7 @@ export const allProductsData =[
   },
   {
     id: 6,
-    image: "/sariBeyazKadinHD.png", 
+    images:["/sariBeyazKadinHD.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"], 
     title: "Web Development",
     department: "IT Department",
     oldPrice: "$16.48",
@@ -61,7 +61,7 @@ export const allProductsData =[
   },
   {
     id: 7,
-    image: "/sweatshirtErkekHD.png", 
+    images:["/sweatshirtErkekHD.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"], 
     title: "Web Development",
     department: "IT Department",
     oldPrice: "$16.48",
@@ -71,7 +71,7 @@ export const allProductsData =[
   },
   {
     id: 8,
-    image: "/uzunKolluErkekHD.png", 
+    images:["/uzunKolluErkekHD.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"], 
     title: "Web Development",
     department: "IT Department",
     oldPrice: "$16.48",
@@ -85,7 +85,7 @@ export const allProductsData =[
     department: "Backend Department",
     oldPrice: "$16.48",
     newPrice: "$13.48",
-    image: "/kazakGiyenKadinhd.png",
+    images:["/kazakGiyenKadinhd.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"],
     colors: ["var(--color-third-color)", "var(--color-money-color)", "var(--color-alert-color)", "var(--color-primary-text)"],
     isBestseller: false,
   },
@@ -95,7 +95,7 @@ export const allProductsData =[
     department: "Computer Engineering",
     oldPrice: "$16.48",
     newPrice: "$11.48",
-    image: "/yesilSiyahMontluErkekHd.png",
+    images:[ "/yesilSiyahMontluErkekHd.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"],
     colors: ["var(--color-third-color)", "var(--color-money-color)", "var(--color-alert-color)", "var(--color-primary-text)"],
     isBestseller: false,
   },
@@ -105,7 +105,7 @@ export const allProductsData =[
     department: "Electronics",
     oldPrice: "$16.48",
     newPrice: "$7.48",
-    image: "/pembeSweatshirtSiyahMontErkekHd.png",
+    images:["/pembeSweatshirtSiyahMontErkekHd.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"],
     colors: ["var(--color-third-color)", "var(--color-money-color)", "var(--color-alert-color)", "var(--color-primary-text)"],
     isBestseller: false,
   },
@@ -115,7 +115,7 @@ export const allProductsData =[
     department: "Business Analysis",
     oldPrice: "$16.48",
     newPrice: "$6.48",
-    image: "/miniErkekhd.png",
+    images:["/miniErkekhd.png","https://images.unsplash.com/photo-1483985988355-763728e1935b?ixlib=rb-4.0.3"],
     colors: ["var(--color-third-color)", "var(--color-money-color)", "var(--color-alert-color)", "var(--color-primary-text)"],
     isBestseller: false,
   }

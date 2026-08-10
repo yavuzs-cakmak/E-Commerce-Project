@@ -1,12 +1,15 @@
+import {Link} from 'react-router-dom';
 
-
-const ProductCard = ({ image, title, department, oldPrice, newPrice, colors, viewMode = 'grid' }) => {
+const ProductCard = ({ id, images, title, department, oldPrice, newPrice, colors, viewMode = 'grid' }) => {
+  const coverPhoto = images && images.length > 0 ? images[0] : "";
   
   if (viewMode === 'list') {
     return (
-      <div className="flex flex-col lg:flex-row w-full bg-white group cursor-pointer border border-gray-100 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
+      <Link 
+      to={`/product/${id}`}
+      className="flex flex-col lg:flex-row w-full bg-white group cursor-pointer border border-gray-100 rounded-lg overflow-hidden hover:shadow-md transition-shadow">
         <div className="w-full lg:w-64 aspect-4/5 lg:aspect-3/4 bg-gray-50 shrink-0">
-          <img src={image} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
+          <img src={coverPhoto} alt={title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300" />
         </div>
         <div className="flex flex-col justify-center text-left p-6 gap-3 w-full">
           <h5 className="text-primary-text font-bold text-xl tracking-wide">{title}</h5>
@@ -23,16 +26,18 @@ const ProductCard = ({ image, title, department, oldPrice, newPrice, colors, vie
             </div>
           )}
         </div>
-      </div>
+      </Link>
     );
   }
 
   return (
-    <div className="w-full max-w-65 mx-auto flex flex-col items-center group cursor-pointer">
+    <Link 
+    to={`/product/${id}`}
+    className="w-full max-w-65 mx-auto flex flex-col items-center group cursor-pointer">
       
       <div className="w-full aspect-4/5 overflow-hidden mb-6 bg-gray-50">
         <img 
-          src={image} 
+          src={coverPhoto} 
           alt={title} 
           className="w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-300"
         />
@@ -60,7 +65,7 @@ const ProductCard = ({ image, title, department, oldPrice, newPrice, colors, vie
         )}
       </div>
       
-    </div>
+    </Link>
   );
 };
 

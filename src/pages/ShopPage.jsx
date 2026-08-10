@@ -139,9 +139,11 @@ return (
               : 'w-full flex justify-center'
           }
               >
-                <ProductCard 
+                <ProductCard
+                  id={product.id}
+                  key={product.id} 
                   viewMode={viewMode}
-                  image={product.image}
+                  images={product.images}
                   title={product.title}
                   department={product.department}
                   oldPrice={product.oldPrice}

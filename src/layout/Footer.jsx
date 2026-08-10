@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import { useForm } from 'react-hook-form';
 import { FaFacebook, FaInstagram, FaTwitter } from 'react-icons/fa';
 import { toast } from 'react-toastify';
@@ -37,40 +38,40 @@ const Footer = () => {
           <div className="flex flex-col gap-4">
             <h5 className="text-primary-text font-bold text-base tracking-wide">Company Info</h5>
             <div className="flex flex-col gap-3 text-sm text-secondary-text font-semibold">
-              <a href="#" className="hover:text-primary-text">About Us</a>
-              <a href="#" className="hover:text-primary-text">Carrier</a>
-              <a href="#" className="hover:text-primary-text">We are hiring</a>
-              <a href="#" className="hover:text-primary-text">Blog</a>
+              <Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">About Us</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">Carrier</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">We are hiring</Link>
+              <Link href="#" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">Blog</Link>
             </div>
           </div>
           
           <div className="flex flex-col gap-4">
             <h5 className="text-primary-text font-bold text-base tracking-wide">Legal</h5>
             <div className="flex flex-col gap-3 text-sm text-secondary-text font-semibold">
-              <a href="#" className="hover:text-primary-text">About Us</a>
-              <a href="#" className="hover:text-primary-text">Carrier</a>
-              <a href="#" className="hover:text-primary-text">We are hiring</a>
-              <a href="#" className="hover:text-primary-text">Blog</a>
+              <Link to="/about" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">About Us</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">Carrier</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">We are hiring</Link>
+              <Link href="#" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">Blog</Link>
             </div>
           </div>
 
           <div className="flex flex-col gap-4">
             <h5 className="text-primary-text font-bold text-base tracking-wide">Features</h5>
             <div className="flex flex-col gap-3 text-sm text-secondary-text font-semibold">
-              <a href="#" className="hover:text-primary-text">Business Marketing</a>
-              <a href="#" className="hover:text-primary-text">User Analytic</a>
-              <a href="#" className="hover:text-primary-text">Live Chat</a>
-              <a href="#" className="hover:text-primary-text">Unlimited Support</a>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">Business Marketing</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">User Analytic</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">Live Chat</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">Unlimited Support</Link>
             </div>
           </div>
 
           <div className="flex flex-col gap-4">
             <h5 className="text-primary-text font-bold text-base tracking-wide">Resources</h5>
             <div className="flex flex-col gap-3 text-sm text-secondary-text font-semibold">
-              <a href="#" className="hover:text-primary-text">IOS & Android</a>
-              <a href="#" className="hover:text-primary-text">Watch a Demo</a>
-              <a href="#" className="hover:text-primary-text">Customers</a>
-              <a href="#" className="hover:text-primary-text">API</a>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">IOS & Android</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">Watch a Demo</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">Customers</Link>
+              <Link to="/contact" onClick={() => window.scrollTo(0, 0)} className="hover:text-primary-text">API</Link>
             </div>
           </div>
 

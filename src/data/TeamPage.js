@@ -14,7 +14,7 @@ export const teamMembers = [
     id: 2,
     name: 'Yavuz Selim Çakmak',
     profession: 'Full Stack Developer',
-    image: '/Myself.jpg',
+    image: '/Myself.jpeg',
     socials: [
       { name: 'facebook', url: 'https://www.linkedin.com/in/yavuzscakmak/' },
       { name: 'instagram', url: 'https://www.linkedin.com/in/yavuzscakmak/' },

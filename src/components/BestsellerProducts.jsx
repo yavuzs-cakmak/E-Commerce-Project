@@ -15,7 +15,7 @@ const BestsellerProducts = () => {
       </div>
 
       <div className="w-full max-w-6xl flex flex-row flex-wrap justify-center lg:justify-between gap-y-16 lg:gap-y-20">
-        
+       
         {bestsellerData.map((product) => (
           <ProductCard 
             key={product.id}
@@ -27,7 +27,7 @@ const BestsellerProducts = () => {
             colors={product.colors}
           />
         ))}
-
+        
       </div>
     </section>
   );

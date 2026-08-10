@@ -3,6 +3,7 @@ import { Switch, Route, useLocation } from 'react-router-dom';
 import Header from './Header'; 
 import HomePage from '../pages/HomePage'; 
 import Footer from './Footer';
+import ShopPage from '../pages/ShopPage';
 
 const CheckoutPage = () => (
   <div className="flex flex-col items-center justify-center p-10 bg-red-100 h-screen">
@@ -24,6 +25,7 @@ const PageContent = () => {
       <main className="flex flex-col grow">
         <Switch>
           <Route exact path="/" component={HomePage} />
+          <Route path="/shop" component={ShopPage} />
           <Route path="/odeme" component={CheckoutPage} />
         </Switch>
       </main>

@@ -143,7 +143,7 @@ const Header = () => {
                 <div className="hidden lg:flex items-center gap-4 text-third-color font-bold text-sm">
                     <div className="flex items-center gap-1.5 cursor-pointer">
                         <User size={16} />
-                        <Link to="/login">Login / Register</Link>
+                        <Link to="/signup">Login / Register</Link>
                     </div>
                     <div className="flex items-center gap-7.5">
                         <Search size={16} className="cursor-pointer" />

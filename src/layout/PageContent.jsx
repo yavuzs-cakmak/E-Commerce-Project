@@ -7,6 +7,7 @@ import ShopPage from '../pages/ShopPage';
 import ProductDetailPage from '../pages/ProductDetailPage';
 import ContactPage from '../pages/ContactPage';
 import AboutUs from '../pages/AboutUs';
+import SignUpPage from '../pages/SignUpPage';
 
 const CheckoutPage = () => (
   <div className="flex flex-col items-center justify-center p-10 bg-red-100 h-screen">
@@ -32,6 +33,7 @@ const PageContent = () => {
           <Route path="/product/:productId" component={ProductDetailPage} />
           <Route path="/contact" component={ContactPage} />
           <Route path="/about" component={AboutUs} />
+          <Route path="/signup" component={SignUpPage} />
           <Route path="/odeme" component={CheckoutPage} />
         </Switch>
       </main>

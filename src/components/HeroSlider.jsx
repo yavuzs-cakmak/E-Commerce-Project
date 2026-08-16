@@ -5,8 +5,12 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { heroSliderData } from '../data/sliderDataa';
+import { Link } from 'react-router-dom';
 
 const HeroSlider = () => {
+  const handleScrollToTop = () => {
+  window.scrollTo(0, 0);
+};
   
   return (
     <div 
@@ -46,9 +50,13 @@ const HeroSlider = () => {
                      <p className="text-lg lg:text-xl max-w-94">
                         {slide.description}
                      </p>
+                     <Link 
+                     onClick={handleScrollToTop}
+                     to="/shop">
                      <button className="bg-success-color hover:bg-green-600 text-white font-bold py-4 px-10 rounded text-2xl transition-colors cursor-pointer">
                         {slide.buttonText}
                      </button>
+                     </Link>
                     </div>
                   </div>
                 </div>

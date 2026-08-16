@@ -1,5 +1,9 @@
+import { Link } from 'react-router-dom';
 
 const EditorsPick = () => {
+  const handleScrollToTop = () => {
+  window.scrollTo(0, 0);
+};
   return (
     <section className="w-full bg-gray-50 flex flex-col items-center py-20 px-8 lg:px-4">
       <div className="flex flex-col items-center text-center mb-12 gap-2 max-w-100">
@@ -11,30 +15,46 @@ const EditorsPick = () => {
         
         <div className="w-full lg:w-1/2 relative flex h-125 overflow-hidden">
           <img src="/CeketErkekhd.png" alt="Men" className="w-full h-full object-cover scale-100 object-[25%_40%]" />
+          <Link 
+          onClick={handleScrollToTop}
+          to="/shop">
           <button className="absolute bottom-6 left-6 bg-white px-16 py-3 text-primary-text font-bold text-sm tracking-wider hover:bg-gray-100 transition-colors cursor-pointer">
             MEN
           </button>
+          </Link>
         </div>
 
         <div className="w-full lg:w-1/4 relative flex h-125">
           <img src="/kazakGiyenKadinhd.png" alt="Women" className="w-full h-full object-cover object-center" />
+          <Link 
+          onClick={handleScrollToTop}
+          to="/shop">
           <button className="absolute bottom-6 left-6 bg-white px-12 py-3 text-primary-text font-bold text-sm tracking-wider hover:bg-gray-100 transition-colors cursor-pointer">
             WOMEN
           </button>
+          </Link>
         </div>
 
         <div className="w-full lg:w-1/4 flex flex-col gap-4 lg:gap-7">
           <div className="w-full relative flex h-60.5">
             <img src="/miniKadinhd.png" alt="Accessories" className="w-full h-full object-cover object-[25%_32%]" />
+            <Link 
+            onClick={handleScrollToTop}
+            to="/shop">
             <button className="absolute bottom-6 left-6 bg-white px-8 py-3 text-primary-text font-bold text-sm tracking-wider hover:bg-gray-100 transition-colors cursor-pointer">
               ACCESSORIES
             </button>
+            </Link>
           </div>
           <div className="w-full relative flex h-60.5">
             <img src="/miniErkekhd.png" alt="Kids" className="w-full h-full object-cover object-[25%_39%]" />
+            <Link 
+            onClick={handleScrollToTop}
+            to="/shop">
             <button className="absolute bottom-6 left-6 bg-white px-10 py-3 text-primary-text font-bold text-sm tracking-wider hover:bg-gray-100 transition-colors cursor-pointer">
               KIDS
             </button>
+            </Link>
           </div>
         </div>
 

@@ -1,4 +1,7 @@
 import { Switch, Route, useLocation } from 'react-router-dom';
+import { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { verifyUserAction } from '../store/actions/clientActions';
 
 import Header from './Header'; 
 import HomePage from '../pages/HomePage'; 
@@ -8,6 +11,8 @@ import ProductDetailPage from '../pages/ProductDetailPage';
 import ContactPage from '../pages/ContactPage';
 import AboutUs from '../pages/AboutUs';
 import SignUpPage from '../pages/SignUpPage';
+import LoginPage from '../pages/LoginPage';
+
 
 const CheckoutPage = () => (
   <div className="flex flex-col items-center justify-center p-10 bg-red-100 h-screen">
@@ -17,6 +22,10 @@ const CheckoutPage = () => (
 
 const PageContent = () => {
   const location = useLocation();
+  const dispatch = useDispatch();
+  useEffect(() => {
+        dispatch(verifyUserAction());
+    }, [dispatch]);
   
   const hideLayoutPaths = ['/odeme']; 
   const isLayoutHidden = hideLayoutPaths.includes(location.pathname);
@@ -34,6 +43,7 @@ const PageContent = () => {
           <Route path="/contact" component={ContactPage} />
           <Route path="/about" component={AboutUs} />
           <Route path="/signup" component={SignUpPage} />
+          <Route path="/login" component={LoginPage} />
           <Route path="/odeme" component={CheckoutPage} />
         </Switch>
       </main>

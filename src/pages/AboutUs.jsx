@@ -4,6 +4,11 @@ import { FaPlay,} from 'react-icons/fa';
 import { brandsData } from '../data/shopData';
 
 const AboutUs = () => {
+
+   const handleScrollToTop = () => {
+    window.scrollTo(0, 0);
+};
+
   return (
     <div className="w-full font-montserrat text-primary-text overflow-hidden">
       <section className="max-w-6xl mx-auto px-6 lg:px-12 py-0 flex flex-col md:flex-row items-center gap-12">
@@ -137,6 +142,7 @@ const AboutUs = () => {
             The gradual accumulation of information about atomic and <br/>small-scale behavior during the first quarter of the 20th
           </p>
           <Link 
+          onClick={handleScrollToTop}
           to="/contact"
           className="border border-white hover:bg-white hover:text-[#2A7CC7] transition-colors font-bold py-3 px-8 rounded mt-4 cursor-pointer">
             Work With Us

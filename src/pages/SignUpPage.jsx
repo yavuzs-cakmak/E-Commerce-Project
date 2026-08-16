@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { api } from '../api/axiosInstance';
 import { Loader } from 'lucide-react';
@@ -55,13 +55,18 @@ const SignUpPage = () => {
             }
             await api.post('/signup', payload);
             toast.success('You need to click link in email to activate your account!');
-      history.goBack();
+            
+            history.push('/'); 
 
         } catch(error){
             const errorMsg = error.response?.data?.message || 'Kayıt işlemi başarısız oldu!';
             toast.error(`Hata: ${errorMsg}`);
         }
     };
+
+  const handleScrollToTop = () => {
+  window.scrollTo(0, 0);
+};
 
     return(
         <div className="min-h-screen flex items-center justify-center bg-gray-50 py-12 px-4 sm:px-6 lg:px-8 font-montserrat">
@@ -190,6 +195,7 @@ const SignUpPage = () => {
               </div>
           )}
           <button
+          onClick={handleScrollToTop}
           type="submit"
           disabled={isSubmitting}
           className="w-full bg-third-color hover:bg-blue-600 text-white font-bold py-3 px-4 rounded flex justify-center items-center transition-colors disabled:opacity-70 disabled:cursor-not-allowed"
@@ -200,6 +206,13 @@ const SignUpPage = () => {
             "Sign Up"
            )}
           </button>
+          
+          <div className="mt-4 text-center text-sm text-secondary-text">
+            Already have an account?{' '}
+            <Link to="/login" replace className="text-third-color hover:underline font-bold">
+              Log In
+            </Link>
+          </div>
      </form>
      </div>
     </div>

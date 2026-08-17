@@ -2,18 +2,31 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {
     Search, ShoppingCart, User, Heart,
-    Phone, Mail, ChevronDown
+    Phone, Mail, ChevronDown, LogOut, Loader
 } from 'lucide-react';
 import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { FaFacebook, FaYoutube } from "react-icons/fa";
 import { TbMenuDeep } from "react-icons/tb";
+import { useSelector, useDispatch } from 'react-redux'; 
+import Gravatar from 'react-gravatar';
+import { setUser } from '../store/actions/clientActions';
 
 const Header = () => {
-
     const [isMenuOpen, setIsMenuOpen] = useState(false);
-
     const [isMobileShopOpen, setIsMobileShopOpen] = useState(false);
-    
+
+    const dispatch = useDispatch();
+    const user = useSelector((state) => state.client.user);
+
+    const token = localStorage.getItem('token');
+    const isAuthLoading = token && !user?.name;
+
+    const handleLogout = () => {
+        localStorage.removeItem('token');
+        dispatch(setUser({})); 
+        setIsMenuOpen(false); 
+    };
+
     return (
         <header className="flex flex-col w-full font-montserrat">
             
@@ -88,10 +101,31 @@ const Header = () => {
                             <Link to="/pages" className="hover:text-third-color transition-colors" onClick={() => setIsMenuOpen(false)}>Pages</Link>
                             
                             <div className="flex flex-col items-center gap-4 mt-2 text-third-color font-bold">
-                                <div className="flex items-center gap-2 text-2xl mt-4 cursor-pointer">
-                                    <User className="w-8 h-8" />
-                                    <Link to="/login" onClick={() => setIsMenuOpen(false)}>Login / Register</Link>
-                                </div>
+                                {isAuthLoading ? (
+                                    <div className="flex flex-col items-center gap-2 mt-4 text-secondary-text">
+                                        <Loader className="w-10 h-10 animate-spin text-third-color" />
+                                    </div>
+                                ) : user?.name ? (
+                                    <div className="flex flex-col items-center gap-3 mt-4">
+                                        <Gravatar 
+                                            email={user.email} 
+                                            size={48}
+                                            className="w-12 h-12 rounded-full border border-third-color object-cover"
+                                        />
+                                        <span className="text-xl text-primary-text">{user.name}</span>
+                                        <button onClick={handleLogout} className="flex items-center gap-2 text-lg text-red-500 hover:text-red-700">
+                                            <LogOut size={24} /> Çıkış Yap
+                                        </button>
+                                    </div>
+                                ) : (
+                                   
+                                    <div className="flex items-center gap-2 text-2xl mt-4 cursor-pointer">
+                                        <User className="w-8 h-8" />
+                                        <Link to="/login" className="hover:text-third-color transition-colors" onClick={() => setIsMenuOpen(false)}>Login</Link>
+                                        <span className="text-gray-400">/</span>
+                                        <Link to="/signup" className="hover:text-third-color transition-colors" onClick={() => setIsMenuOpen(false)}>Register</Link>
+                                    </div>
+                                )}
 
                                 <div className="flex items-center gap-2 text-2xl cursor-pointer">
                                     <Heart className="w-8 h-8" />
@@ -128,8 +162,7 @@ const Header = () => {
                                     </div>
                                 </div>
 
-                                <div className="flex-1 bg-third-color rounded flex items-center justify-center p-4 min-h-30">
-                                </div>
+                                <div className="flex-1 bg-third-color rounded flex items-center justify-center p-4 min-h-30"></div>
                             </div>
                         </div>
                     </div>
@@ -141,10 +174,31 @@ const Header = () => {
                 </nav>
 
                 <div className="hidden lg:flex items-center gap-4 text-third-color font-bold text-sm">
-                    <div className="flex items-center gap-1.5 cursor-pointer">
-                        <User size={16} />
-                        <Link to="/signup">Login / Register</Link>
-                    </div>
+                    {isAuthLoading ? (
+                        <div className="flex items-center gap-1.5 cursor-default">
+                            <Loader size={20} className="animate-spin text-third-color" />
+                        </div>
+                    ) : user?.name ? (
+                        <div className="flex items-center gap-2 cursor-default">
+                            <Gravatar 
+                                email={user.email} 
+                                size={28}
+                                className="w-7 h-7 rounded-full border border-third-color object-cover"
+                            />
+                            <span className="text-primary-text">{user.name}</span>
+                            <button onClick={handleLogout} className="text-gray-500 hover:text-red-600 transition-colors ml-2" title="Çıkış Yap">
+                                <LogOut size={18} />
+                            </button>
+                        </div>
+                    ) : (
+                        
+                        <div className="flex items-center gap-1.5">
+                            <User size={16} />
+                            <Link to="/login" className="hover:text-third-color transition-colors">Login</Link>
+                            <span className="text-gray-300">/</span>
+                            <Link to="/signup" className="hover:text-third-color transition-colors">Register</Link>
+                        </div>
+                    )}
                     <div className="flex items-center gap-7.5">
                         <Search size={16} className="cursor-pointer" />
                         <div className="flex items-center gap-1.25 cursor-pointer">

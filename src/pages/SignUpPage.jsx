@@ -1,14 +1,17 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { useForm, useWatch } from 'react-hook-form';
 import { useHistory } from 'react-router-dom';
 import { toast } from 'react-toastify';
 import { api } from '../api/axiosInstance';
 import { Loader } from 'lucide-react';
+import { useDispatch, useSelector } from 'react-redux';
+import { fetchRolesAction } from '../store/actions/clientActions';
 
 const SignUpPage = () => {
     const history = useHistory();
-    const [roles, setRoles] = useState([]);
-    const [storeRoleId, setStoreRoleId] = useState(null);
+    const dispatch = useDispatch();
+    const roles = useSelector((state)=> state.client.roles);
+    const storeRoleId = roles.find((r) => r.code === 'store' || r.name === 'Mağaza')?.id;
 
     const{
         register,
@@ -21,28 +24,18 @@ const SignUpPage = () => {
     const currentPassword = useWatch({ control, name: 'password' });
     const selectedRoleId = useWatch({ control, name: 'role_id' });
 
-    useEffect (()=>{
-       const fetchRoles = async () => {
-         try{
-            const response = await api.get('/roles');
-            const rolesData = response.data;
-            setRoles(rolesData);
+    useEffect(() => {
+        dispatch(fetchRolesAction());
+    }, [dispatch]);
 
-            const customerRole = rolesData.find(r => r.code == 'customer' || r.name == 'Müşteri');
-            const storeRole = rolesData.find(r => r.code == 'store' || r.name == 'Mağaza')
-            if(customerRole){
+    useEffect (()=>{
+       if (roles && roles.length > 0 && !selectedRoleId) {
+            const customerRole = roles.find(r => r.code === 'customer' || r.name === 'Müşteri');
+            if (customerRole && !selectedRoleId) {
                 setValue('role_id', customerRole.id);
             }
-            if(storeRole){
-                setStoreRoleId(storeRole.id);
-            }
-         } catch(error){
-            console.error('Roles fetch error:', error);
-            toast.error('Roller yüklenirken bir hata oluştu!');
-         }
-       };
-       fetchRoles();
-    },[setValue]);
+        }
+    },[roles, setValue, selectedRoleId]);
 
     const onSubmit = async (formData) => {
         try{

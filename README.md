@@ -1,5 +1,7 @@
 # Bandage E-Commerce Platform
 
+🔗 **Canlı Demo:** [https://e-commerce-project-zeta-orpin.vercel.app/](https://e-commerce-project-zeta-orpin.vercel.app/)
+
 Bandage, React ve Vite altyapısı kullanılarak "Mobile First" yaklaşımıyla geliştirilmiş kapsamlı bir e-ticaret uygulamasıdır. Figma tasarım dosyalarına birebir sadık kalınarak, özel CSS sınıfları kullanılmadan tamamen Tailwind CSS (Flex Layout) ile inşa edilmiştir.
 
 ## 🛠 Geliştirme Süreci ve İş Akışı
@@ -105,7 +107,7 @@ Geliştirme sunucusunu başlatın:
 npm run dev
 ```
  
-### 👥 Ekip
+## 👥 Ekip
 **[Gökhan Özdemir](https://github.com/gokhanozdemir)** - Project Manager
 
 Yavuz Selim Çakmak - Full Stack Developer

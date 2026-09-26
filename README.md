@@ -7,7 +7,7 @@ Bandage, React ve Vite altyapısı kullanılarak "Mobile First" yaklaşımıyla 
 Projenin planlanması ve geliştirme aşamaları GitHub Projects üzerinde oluşturulan bir Kanban panosu üzerinden profesyonel bir metodoloji ile yürütülmüştür.
 
 * **Kanban Akışı:** Görevler "Sprint Backlog", "In progress", "In review" ve "Done" sütunları arasında ilerletilerek projenin durumu anlık olarak takip edilmiştir. Panoda "T01: Project Setup", "T02: Home Page", "T11: Auto login by token from localStorage" gibi belirli görev (task) kartları kullanılmıştır.
-* **Takım Çalışması:** Projenin kodlanması ve Pull Request (PR) işlemlerinin oluşturulması tarafımca gerçekleştirilmiştir. Yazılım Geliştirici **[Buse Çalışkan]([https://github.com/busecllskn])** ile birlikte çalışılarak, açılan PR'ların kod incelemesi (Code Review) yapılmış ve ana dala (main) Merge/Push işlemleri ekip içi standartlara uygun olarak tamamlanmıştır.
+* **Takım Çalışması:** Projenin kodlanması ve Pull Request (PR) işlemlerinin oluşturulması tarafımca gerçekleştirilmiştir. Yazılım Geliştirici **[Buse Çalışkan](https://github.com/busecllskn)** ile birlikte çalışılarak, açılan PR'ların kod incelemesi (Code Review) yapılmış ve ana dala (main) Merge/Push işlemleri ekip içi standartlara uygun olarak tamamlanmıştır.
 
 ## 💻 Teknoloji Yığını
 
@@ -86,3 +86,22 @@ Kullanıcının sepet ve ödeme aşamalarını yönetir.
 1. Repoyu klonlayın:
    ```bash
    git clone
+   Bağımlılıkları yükleyin:
+
+Bash
+npm install
+Proje ana dizininde bir .env dosyası oluşturun ve temel API adresini tanımlayın:
+
+Kod snippet'i
+VITE_API_URL=[https://workintech-fe-ecommerce.onrender.com](https://workintech-fe-ecommerce.onrender.com)
+Geliştirme sunucusunu başlatın:
+
+Bash
+npm run dev
+ ```bash 
+### 👥 Ekip
+**[Gökhan Özdemir](https://github.com/gokhanozdemir)** - Project Manager
+
+Yavuz Selim Çakmak - Full Stack Developer
+
+**[Buse Çalışkan](https://github.com/busecllskn)** - Full Stack Developer

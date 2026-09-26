@@ -86,20 +86,24 @@ Kullanıcının sepet ve ödeme aşamalarını yönetir.
 1. Repoyu klonlayın:
    ```bash
    git clone
+   ```
+   
    Bağımlılıkları yükleyin:
-
 ```bash
 npm install
+```
+
 Proje ana dizininde bir .env dosyası oluşturun ve temel API adresini tanımlayın:
 
 ```bash
 Kod snippet'i
-VITE_API_URL=[https://workintech-fe-ecommerce.onrender.com](https://workintech-fe-ecommerce.onrender.com)
-Geliştirme sunucusunu başlatın:
+VITE_API_URL=https://workintech-fe-ecommerce.onrender.com
+```
 
+Geliştirme sunucusunu başlatın:
 ```bash
 npm run dev
-
+```
  
 ### 👥 Ekip
 **[Gökhan Özdemir](https://github.com/gokhanozdemir)** - Project Manager

@@ -7,7 +7,7 @@ Bandage, React ve Vite altyapısı kullanılarak "Mobile First" yaklaşımıyla 
 Projenin planlanması ve geliştirme aşamaları GitHub Projects üzerinde oluşturulan bir Kanban panosu üzerinden profesyonel bir metodoloji ile yürütülmüştür.
 
 * **Kanban Akışı:** Görevler "Sprint Backlog", "In progress", "In review" ve "Done" sütunları arasında ilerletilerek projenin durumu anlık olarak takip edilmiştir. Panoda "T01: Project Setup", "T02: Home Page", "T11: Auto login by token from localStorage" gibi belirli görev (task) kartları kullanılmıştır.
-* **Takım Çalışması:** Projenin kodlanması ve Pull Request (PR) işlemlerinin oluşturulması tarafımca gerçekleştirilmiştir. Yazılım Geliştirici **[Buse Çalışkan]([https://github.com/buse-github-kullanici-adi](https://github.com/busecllskn))** ile birlikte çalışılarak, açılan PR'ların kod incelemesi (Code Review) yapılmış ve ana dala (main) Merge/Push işlemleri ekip içi standartlara uygun olarak tamamlanmıştır.
+* **Takım Çalışması:** Projenin kodlanması ve Pull Request (PR) işlemlerinin oluşturulması tarafımca gerçekleştirilmiştir. Yazılım Geliştirici **[Buse Çalışkan]([https://github.com/busecllskn])** ile birlikte çalışılarak, açılan PR'ların kod incelemesi (Code Review) yapılmış ve ana dala (main) Merge/Push işlemleri ekip içi standartlara uygun olarak tamamlanmıştır.
 
 ## 💻 Teknoloji Yığını
 
